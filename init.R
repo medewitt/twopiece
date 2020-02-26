@@ -16,3 +16,7 @@ usethis::use_gpl3_license()
 
 usethis::use_build_ignore("init.R")
 usethis::use_build_ignore("Makefile")
+
+# Future Vignettes
+# https://rpubs.com/FJRubio/DTP
+# https://rpubs.com/FJRubio/twopiece
