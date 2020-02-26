@@ -1,0 +1,38 @@
+Package: twopiece
+Title: The Family of Two-Piece Distributions
+Version: 1.2.1
+Authors@R: 
+    c(person(given = "Francisco Javier",
+           family = "Rubio",
+           role = c("aut", "cre"),
+           email = "fxrubio@gmail.com"),
+           person(given = "A. M.",
+           family = "Lopez",
+           role = c("aut"),
+           email = "amonteslop@gmail.com"),
+           person(given = "David",
+           family = "Rossell",
+           role = c("aut"),
+           email = "rosselldavid@gmail.com"),
+           person(given = "Michael",
+           family = "DeWitt",
+           role = c("aut"),
+           email = "me.dewitt.jr@gmail.com",
+           comment = c(ORCID = "0000-0001-8940-1967")))
+Maintainer: F. J. Rubio <fxrubio@gmail.com>
+Description: Density, distribution function, quantiles and random generation 
+    for two piece distributions. Multivariate versions, mixture models (including 
+    Normal mixtures) and model fitting algorithms are also available.
+Depends:
+  R (>= 3.0)
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    mclust,
+    ellipse,
+    methods,
+    mvtnorm,
+    flexclust,
+    label.switching
+RoxygenNote: 7.0.2
