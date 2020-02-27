@@ -15,6 +15,8 @@ usethis::use_pipe()
 # Add the License
 usethis::use_gpl3_license()
 
+# Build Website
+
 # https://r-forge.r-project.org/scm/viewvc.php/pkg/twopiece/R/ptp4.R?root=twopiece&view=log
 
 usethis::use_build_ignore("init.R")

@@ -9,7 +9,9 @@
 # CLASS normFit
 ########################################################################################################
 
-setClass("normFit", representation("list"), prototype = prototype(elementType = "list"), contains="list")
+setClass("normFit", representation("list"),
+         prototype = prototype(elementType = "list"),
+         contains="list")
 
 valid_normFit <- function(object) {
   msg <- NULL
@@ -28,7 +30,9 @@ setValidity("normFit", valid_normFit)
 # CLASS skewtFit
 ########################################################################################################
 
-setClass("skewtFit", representation("list"), prototype = prototype(elementType = "list"), contains="list")
+setClass("skewtFit",
+         representation("list"),
+         prototype = prototype(elementType = "list"), contains="list")
 
 valid_skewtFit <- function(object) {
   msg <- NULL

@@ -40,11 +40,14 @@ library(twopiece)
 ## basic example code
 ```
 
-Generate random numbers from a two-piece normal distribution
+Generate random numbers from a two piece normal distribution
 
 ``` r
-sim <- rtp3(1000,0,1,1,rnorm)
-hist(sim,probability=TRUE)
+sim <- rtp3(1000,0,1,5,rnorm)
+hist(sim,
+     probability=TRUE, 
+     main = bquote("Two Piece Normal Distribution with "~sigma[1]~"=1 and "~sigma[2]~"=5"))
+lines(density(sim), col = "blue")
 ```
 
 <img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />

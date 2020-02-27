@@ -36,3 +36,5 @@ Imports:
     flexclust,
     label.switching
 RoxygenNote: 7.0.2
+Suggests: 
+    covr
