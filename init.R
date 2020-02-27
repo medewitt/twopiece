@@ -19,7 +19,13 @@ usethis::use_gpl3_license()
 
 usethis::use_build_ignore("init.R")
 usethis::use_build_ignore("Makefile")
+usethis::use_build_ignore("docs")
 
+# CI and Package Architecture
+usethis::use_gitlab_ci()
+usethis::use_travis()
+usethis::use_coverage()
+usethis::use_readme_rmd()
 # Future Vignettes
 # https://rpubs.com/FJRubio/DTP
 # https://rpubs.com/FJRubio/twopiece
