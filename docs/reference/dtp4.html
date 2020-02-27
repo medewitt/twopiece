@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The 3-Parameter Two Piece Distribution — dtp3 • twopiece</title>
+<title>The 4-Parameter Two Piece Distribution — dtp4 • twopiece</title>
 
 
 <!-- jquery -->
@@ -35,10 +35,10 @@
 
 
 
-<meta property="og:title" content="The 3-Parameter Two Piece Distribution — dtp3" />
-<meta property="og:description" content="Density, distribution function, quantile function and random
-generation for the 3-parameter two piece distribution with 3
-parameterizations: two-piece (tp), epsilon-skew (eps), and inverse scale factors (isf)." />
+<meta property="og:title" content="The 4-Parameter Two Piece Distribution — dtp4" />
+<meta property="og:description" content="Density, distribution function, quantile function and random generation for
+the 4-parameter two piece distribution with 3 parameterizations:
+two-piece (tp), epsilon-skew (eps), and inverse scale factors (isf)" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -102,21 +102,21 @@ parameterizations: two-piece (tp), epsilon-skew (eps), and inverse scale factors
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>The 3-Parameter Two Piece Distribution</h1>
+    <h1>The 4-Parameter Two Piece Distribution</h1>
     
-    <div class="hidden name"><code>dtp3.Rd</code></div>
+    <div class="hidden name"><code>dtp4.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Density, distribution function, quantile function and random
-generation for the 3-parameter two piece distribution with 3
-parameterizations: two-piece (tp), epsilon-skew (eps), and inverse scale factors (isf).</p>
+    <p>Density, distribution function, quantile function and random generation for
+the 4-parameter two piece distribution with 3 parameterizations:
+two-piece (tp), epsilon-skew (eps), and inverse scale factors (isf)</p>
     </div>
 
-    <pre class="usage"><span class='fu'>dtp3</span>(<span class='no'>x</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>, <span class='kw'>log</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
-<span class='fu'>ptp3</span>(<span class='no'>x</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>, <span class='kw'>log.p</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
-<span class='fu'>qtp3</span>(<span class='no'>p</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>)
-<span class='fu'>rtp3</span>(<span class='no'>n</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>)</pre>
+    <pre class="usage"><span class='fu'>dtp4</span>(<span class='no'>x</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>delta</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>, <span class='kw'>log</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+<span class='fu'>ptp4</span>(<span class='no'>x</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>delta</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>, <span class='kw'>log.p</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+<span class='fu'>qtp4</span>(<span class='no'>p</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>delta</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>)
+<span class='fu'>rtp4</span>(<span class='no'>n</span>, <span class='no'>mu</span>, <span class='no'>par1</span>, <span class='no'>par2</span>, <span class='no'>delta</span>, <span class='no'>FUN</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -136,6 +136,10 @@ parameterizations: two-piece (tp), epsilon-skew (eps), and inverse scale factors
     <tr>
       <th>par2</th>
       <td><p>scale parameter 2, \(\sigma_2\)</p></td>
+    </tr>
+    <tr>
+      <th>delta</th>
+      <td><p>shape parameter, \(\delta\)</p></td>
     </tr>
     <tr>
       <th>FUN</th>
@@ -165,17 +169,18 @@ parameterizations: two-piece (tp), epsilon-skew (eps), and inverse scale factors
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>The 3-parameter two piece distribution with parameters \(\mu\)
-\(\sigma_1\)and \(\sigma_2\)
+    <p>The 4-parameter two piece distribution with parameters \(\mu\)
+\(\sigma_1\)and \(\sigma_2\) and \(\delta\)
 has the following density:</p>
-<p>$$s(x) = \frac{2}{\sigma_1 + \sigma_2}f( ( x -\mu )/\sigma_1 ) \quad for \quad x&lt;\mu $$
+<p>$$s(x) = \frac{2}{\sigma_1 + \sigma_2}f( ( x -\mu )/\sigma_1, \delta ) \quad for \quad x&lt;\mu $$
 and
-$$s(x) = \frac{2}{\sigma_1 + \sigma_2}f( ( x -\mu )/\sigma_2 ) \quad for \quad x\geq \mu $$</p>
+$$s(x) = \frac{2}{\sigma_1 + \sigma_2}f( ( x -\mu )/\sigma_2, \delta ) \quad for \quad x\geq \mu $$</p>
 <p>where <code>f(x)</code> is a symmetric density about zero.</p>
 <p>If param is not specified, it assumes the default value of "tp".
 Information about the "eps" and "isf" parameterizations can be found in the References.
-<code>dtp3</code> gives the density, <code>ptp3</code> gives the distribution function,
-<code>qtp3</code> gives the quantile function and <code>rtp3</code> generates random deviates.</p>
+<code>dtp4</code> gives the density
+<code>ptp4</code> gives the distribution function
+<code>qtp4</code> gives the quantile function and <code>rtp4</code> generates random deviates</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Arellano-Valle, R. B Gómez, H. W. and Quintana, F. A. (2005). Statistical inference for general class of
@@ -189,23 +194,23 @@ Jeffreys Priors, with discussion. <em>Bayesian Analysis</em>, <b>9</b>: 1-22.</p
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a> for the normal distribution and <a href='https://rdrr.io/r/stats/TDist.html'>dt</a> for the Student t distribution
-<code><a href='dtp4.html'>dtp4</a></code> for the 4-parameter two piece distribution.</p></div>
+<code><a href='dtp3.html'>dtp3</a></code> for the 3-parameter two piece distribution.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='co'>## 3-parameter two piece normal density with parameterization "tp"</span>
-<span class='no'>tempf</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'>dtp3</span>(<span class='no'>x</span>,<span class='fl'>0</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='no'>dnorm</span>,<span class='kw'>param</span><span class='kw'>=</span><span class='st'>"tp"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/curve.html'>curve</a></span>(<span class='no'>tempf</span>,-<span class='fl'>10</span>,<span class='fl'>5</span>)</div><div class='img'><img src='dtp3-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'>## 3-parameter two piece normal distribution with parameterization "tp"</span>
-<span class='no'>tempf</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'>ptp3</span>(<span class='no'>x</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>3</span>,<span class='no'>pnorm</span>,<span class='kw'>param</span><span class='kw'>=</span><span class='st'>"tp"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/curve.html'>curve</a></span>(<span class='no'>tempf</span>,-<span class='fl'>10</span>,<span class='fl'>10</span>)</div><div class='img'><img src='dtp3-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'>## random number generation for 3-parameter two piece normal distribution</span>
-<span class='co'>## with parameterization "tp"</span>
-<span class='no'>sim</span> <span class='kw'>&lt;-</span> <span class='fu'>rtp3</span>(<span class='fl'>1000</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='no'>rnorm</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span>(<span class='no'>sim</span>,<span class='kw'>probability</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='img'><img src='dtp3-3.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'>## quantile function for the 3-parameter two piece normal distribution</span>
-<span class='co'>## with parameterization "tp"</span>
-<span class='fu'>qtp3</span>(<span class='fl'>0.5</span>, <span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='no'>qnorm</span>, <span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>)</div><div class='output co'>#&gt; [1] 0</div></pre>
+<span class='co'>## 4-parameter two piece Student-t density with parameterization 'tp'</span>
+<span class='no'>tempf</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'>dtp4</span>(<span class='no'>x</span>,<span class='fl'>0</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='fl'>4</span>,<span class='no'>dt</span>,<span class='kw'>param</span><span class='kw'>=</span><span class='st'>"tp"</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/curve.html'>curve</a></span>(<span class='no'>tempf</span>,-<span class='fl'>10</span>,<span class='fl'>5</span>)</div><div class='img'><img src='dtp4-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>## 4-parameter two piece Student-t distribution with parameterization 'tp'</span>
+<span class='no'>tempf</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'>ptp4</span>(<span class='no'>x</span>,<span class='fl'>0</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='fl'>4</span>,<span class='no'>pt</span>,<span class='kw'>param</span><span class='kw'>=</span><span class='st'>"tp"</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/curve.html'>curve</a></span>(<span class='no'>tempf</span>,-<span class='fl'>10</span>,<span class='fl'>10</span>)</div><div class='img'><img src='dtp4-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>## random number generation for 4-parameter two piece Student-t distribution</span>
+<span class='co'>## with parameterization 'tp'</span>
+<span class='no'>sim</span> <span class='kw'>&lt;-</span> <span class='fu'>rtp4</span>(<span class='fl'>1000</span>,<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>10</span>,<span class='no'>rt</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span>(<span class='no'>sim</span>, <span class='kw'>probability</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>10</span>,<span class='fl'>10</span>),<span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fu'><a href='https://rdrr.io/r/stats/TDist.html'>dt</a></span>(<span class='fl'>0</span>,<span class='fl'>4</span>)))</div><div class='img'><img src='dtp4-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'>## quantile function for the 4-parameter two piece Student-t distribution</span>
+<span class='co'>## with parameterization 'tp'</span>
+<span class='fu'>qtp4</span>(<span class='fl'>0.5</span>, <span class='fl'>0</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>4</span>, <span class='no'>qt</span> ,<span class='kw'>param</span> <span class='kw'>=</span> <span class='st'>"tp"</span>)</div><div class='output co'>#&gt; [1] 0</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

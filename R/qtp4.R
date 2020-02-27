@@ -1,5 +1,9 @@
+#' @export
 qtp4 <-
   function(p, mu, par1, par2, delta, FUN,param = "tp"){
+
+    param = match.arg(param, choices = c("tp", "eps", "isf"))
+
     if(param == "tp")
     {
       ifelse( par1 > 0  & par2 > 0,

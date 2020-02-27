@@ -1,7 +1,7 @@
 #' @aliases dtp3
 #' @export
 ptp3 <-
-  function(x, mu, par1, par2, FUN,param = "tp", log.p = FALSE ){
+  function(x, mu, par1, par2, FUN, param = "tp", log.p = FALSE ){
     if(param == "tp")
     {
       ifelse( par1 > 0  & par2 > 0,

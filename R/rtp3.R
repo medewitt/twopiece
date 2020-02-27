@@ -3,6 +3,9 @@
 #'
 rtp3 <-
   function(n, mu, par1, par2, FUN, param = "tp"){
+
+    param = match.arg(param, choices = c("tp", "eps", "isf"))
+
     if(param == "tp")
     {
       ifelse( par1 > 0  & par2 > 0,

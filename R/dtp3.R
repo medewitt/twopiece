@@ -77,7 +77,7 @@
 #'
 #' ## quantile function for the 3-parameter two piece normal distribution
 #' ## with parameterization "tp"
-#' qtp3(0.5, 0, 1, 1, qnorm ,param = "tp")
+#' qtp3(0.5, 0, 1, 1, qnorm, param = "tp")
 #' @name dtp3
 #' @aliases dtp3
 #' @aliases qtp3
@@ -87,7 +87,10 @@
 #'
 
 dtp3 <-
-  function(x, mu, par1, par2, FUN,param = "tp", log = FALSE ){
+  function(x, mu, par1, par2, FUN, param = "tp", log = FALSE ){
+
+    param = match.arg(param, choices = c("tp", "eps", "isf"))
+
     if(param == "tp")
     {
       ifelse( par1 > 0  & par2 > 0,

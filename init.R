@@ -22,6 +22,8 @@ usethis::use_gpl3_license()
 usethis::use_build_ignore("init.R")
 usethis::use_build_ignore("Makefile")
 usethis::use_build_ignore("docs")
+usethis::use_build_ignore("Makefile")
+usethis::use_build_ignore(".github")
 
 # CI and Package Architecture
 usethis::use_appveyor()

@@ -48,7 +48,7 @@ library(twopiece)
 ## basic example code
 ```
 
-Generate random numbers from a two piece normal distribution
+Generate random numbers from a two piece normal distribution:
 
 ```{r}
 sim <- rtp3(1000,0,1,5,rnorm)

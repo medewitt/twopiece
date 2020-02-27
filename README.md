@@ -11,6 +11,8 @@ status](https://github.com/medewitt/twopiece/workflows/R-CMD-check/badge.svg)](h
 status](https://travis-ci.org/medewitt/twopiece.svg?branch=master)](https://travis-ci.org/medewitt/twopiece)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/medewitt/twopiece?branch=master&svg=true)](https://ci.appveyor.com/project/medewitt/twopiece)
+[![Codecov test
+coverage](https://codecov.io/gh/medewitt/twopiece/branch/master/graph/badge.svg)](https://codecov.io/gh/medewitt/twopiece?branch=master)
 <!-- badges: end -->
 
 The goal of twopiece is to …
@@ -40,7 +42,7 @@ library(twopiece)
 ## basic example code
 ```
 
-Generate random numbers from a two piece normal distribution
+Generate random numbers from a two piece normal distribution:
 
 ``` r
 sim <- rtp3(1000,0,1,5,rnorm)
