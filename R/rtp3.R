@@ -1,3 +1,6 @@
+#' @aliases dtp3
+#' @export
+#'
 rtp3 <-
   function(n, mu, par1, par2, FUN, param = "tp"){
     if(param == "tp")

@@ -6,6 +6,9 @@ usethis::use_package("methods")
 usethis::use_package("mvtnorm")
 usethis::use_package("label.switching")
 
+# add package R
+usethis::use_package_doc()
+
 # Add the Pipe
 usethis::use_pipe()
 

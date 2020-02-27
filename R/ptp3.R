@@ -1,3 +1,5 @@
+#' @aliases dtp3
+#' @export
 ptp3 <-
   function(x, mu, par1, par2, FUN,param = "tp", log.p = FALSE ){
     if(param == "tp")
