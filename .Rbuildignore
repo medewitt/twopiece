@@ -7,3 +7,4 @@
 ^\.gitlab-ci\.yml$
 ^\.travis\.yml$
 ^README\.Rmd$
+^appveyor\.yml$

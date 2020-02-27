@@ -22,7 +22,7 @@ usethis::use_build_ignore("Makefile")
 usethis::use_build_ignore("docs")
 
 # CI and Package Architecture
-usethis::use_gitlab_ci()
+usethis::use_appveyor()
 usethis::use_travis()
 usethis::use_coverage()
 usethis::use_readme_rmd()

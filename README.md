@@ -5,8 +5,12 @@
 
 <!-- badges: start -->
 
+[![R build
+status](https://github.com/medewitt/twopiece/workflows/R-CMD-check/badge.svg)](https://github.com/medewitt/twopiece)
 [![Travis build
 status](https://travis-ci.org/medewitt/twopiece.svg?branch=master)](https://travis-ci.org/medewitt/twopiece)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/medewitt/twopiece?branch=master&svg=true)](https://ci.appveyor.com/project/medewitt/twopiece)
 <!-- badges: end -->
 
 The goal of twopiece is to …
