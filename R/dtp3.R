@@ -109,5 +109,8 @@ dtp3 <-
               logPDF <- 'invalid arguments: par1 or/and par2 is/are not positive in the parametrization isf' )
 
     }
-    ifelse( is.numeric(logPDF),ifelse( log, return(logPDF), return(exp(logPDF)) ), logPDF )
+    ifelse( is.numeric(logPDF),
+            ifelse( log, return(logPDF),
+                    return(exp(logPDF)) ),
+            logPDF )
   }
