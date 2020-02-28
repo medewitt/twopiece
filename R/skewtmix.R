@@ -488,7 +488,7 @@ mixskewtGibbs <- function(x, G, clusini='kmedians', priorParam=skewtprior(ncol(x
       } else if (clusini=='kmeans') {
         z <- kmeans(x, centers=G)$cluster
       } else if (clusini=='em') {
-        z <- try(Mclust(x, G=G, modelNames='VVV')$classification)
+        z <- try(mclust::Mclust(x, G=G, modelNames='VVV')$classification)
       } else stop("Invalid value for 'clusini'")
       if (class(z)=='try-error') z <- kmeans(x, centers=G)$cluster
     } else {

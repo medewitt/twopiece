@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • twopiece</title>
+<title>Density for mixture of Normals — dmixnorm • twopiece</title>
 
 
 <!-- jquery -->
@@ -35,7 +35,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Density for mixture of Normals — dmixnorm" />
+<meta property="og:description" content="This function outputs the density for a mixture of normal distribution" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -54,7 +56,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -96,60 +98,54 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Density for mixture of Normals</h1>
+    
+    <div class="hidden name"><code>dmixnorm.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>This function outputs the density for a mixture of normal distribution</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='fu'>dmixnorm</span>(<span class='no'>x</span>, <span class='no'>mu</span>, <span class='no'>Sigma</span>, <span class='no'>probs</span>, <span class='kw'>logscale</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="dmixnorm.html">dmixnorm()</a></code> </p>
-        </td>
-        <td><p>Density for mixture of Normals</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dtp3.html">dtp3()</a></code> <code><a href="dtp3.html">ptp3()</a></code> <code><a href="dtp3.html">qtp3()</a></code> <code><a href="dtp3.html">rtp3()</a></code> </p>
-        </td>
-        <td><p>The 3-Parameter Two Piece Distribution</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="dtp4.html">dtp4()</a></code> <code><a href="dtp4.html">ptp4()</a></code> <code><a href="dtp4.html">qtp4()</a></code> <code><a href="dtp4.html">rtp4()</a></code> </p>
-        </td>
-        <td><p>The 4-Parameter Two Piece Distribution</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="rmixnorm.html">rmixnorm()</a></code> </p>
-        </td>
-        <td><p>Multivariate draws from Normal mixture</p></td>
-      </tr>
-    </tbody>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>vector or matrix of quantiles. If x is a matrix, each row is taken
+to be a quantile.</p></td>
+    </tr>
+    <tr>
+      <th>mu</th>
+      <td><p>a list of means</p></td>
+    </tr>
+    <tr>
+      <th>Sigma</th>
+      <td><p>a list covariance matrices</p></td>
+    </tr>
+    <tr>
+      <th>probs</th>
+      <td><p>a numeric non-negative vector of length K, specifying the
+probability for the K classes</p></td>
+    </tr>
+    <tr>
+      <th>logscale</th>
+      <td><p>return log density if <code>TRUE</code>, default <code>FALSE</code></p></td>
+    </tr>
     </table>
-  </div>
 
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#arguments">Arguments</a></li>
     </ul>
+
   </div>
 </div>
 

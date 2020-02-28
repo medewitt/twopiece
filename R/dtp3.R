@@ -91,6 +91,10 @@ dtp3 <-
 
     param = match.arg(param, choices = c("tp", "eps", "isf"))
 
+    if(!is.logical(log)){
+      stop("log.p must be a boolean")
+    }
+
     if(param == "tp")
     {
       ifelse( par1 > 0  & par2 > 0,
