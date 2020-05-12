@@ -15,8 +15,8 @@ ptp3 <-
         stop('invalid arguments: par1 or/and par2 is/are not positive in the parametrization tp')
       }
 
-      CDF  <-  ifelse( x < mu ,2*par1*FUN( (x-mu)/par1, log.p)/(par1+par2),
-                       ( par1 + par2*(2*FUN( (x-mu)/par2, log.p)-1) )/( par1+par2))
+      CDF  <-  ifelse( x < mu ,2*par1*FUN( (x-mu)/par1, log.p = F)/(par1+par2),
+                       ( par1 + par2*(2*FUN( (x-mu)/par2, log.p = F)-1) )/( par1+par2))
     }
     if(param == "eps")
     {
@@ -28,8 +28,8 @@ ptp3 <-
       }
 
       CDF  <- ifelse( x < mu,
-                      (1+gamma)*FUN( (x-mu)/(sigma*(1+gamma)), log.p ),
-                      gamma + (1-gamma)*FUN( (x-mu)/(sigma*(1-gamma)), log.p ) )
+                      (1+gamma)*FUN( (x-mu)/(sigma*(1+gamma)), log.p  = F),
+                      gamma + (1-gamma)*FUN( (x-mu)/(sigma*(1-gamma)), log.p  = F) )
     }
     if(param == "isf")
     {
@@ -40,7 +40,7 @@ ptp3 <-
 
       CDF <-  ifelse( x < mu,
                       2*gamma^2*FUN( (x-mu)/(sigma*gamma), log.p=F )/(1+gamma^2),
-                      ( gamma^2-1 + 2*FUN( (x-mu)/(sigma/gamma), log.p)  )/(1+gamma^2))
+                      ( gamma^2-1 + 2*FUN( (x-mu)/(sigma/gamma), log.p = F)  )/(1+gamma^2))
 
     }
     ifelse( log.p,

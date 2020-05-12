@@ -11,7 +11,7 @@ ptp4 <-
     if(param == "tp")
     {
       ifelse( par1 > 0  & par2 > 0,
-              CDF  <-  ifelse( x < mu ,2*par1*FUN( (x-mu)/par1, delta, log.p)/(par1+par2),( par1 + par2*(2*FUN( (x-mu)/par2, delta, log.p)-1) )/( par1+par2)),
+              CDF  <-  ifelse( x < mu ,2*par1*FUN( (x-mu)/par1, delta, log.p = F)/(par1+par2),( par1 + par2*(2*FUN( (x-mu)/par2, delta, log.p = F)-1) )/( par1+par2)),
               CDF  <- 'invalid arguments: par1 or/and par2 is/are not positive in the parametrization tp' )
     }
     if(param == "eps")
@@ -19,7 +19,7 @@ ptp4 <-
       sigma  = par1
       gamma  = par2
       ifelse( sigma > 0 & abs(gamma) < 1,
-              CDF  <- ifelse( x < mu, (1+gamma)*FUN( (x-mu)/(sigma*(1+gamma)), delta, log.p ),gamma + (1-gamma)*FUN( (x-mu)/(sigma*(1-gamma)), delta, log.p ) ) ,
+              CDF  <- ifelse( x < mu, (1+gamma)*FUN( (x-mu)/(sigma*(1+gamma)), delta, log.p  = F),gamma + (1-gamma)*FUN( (x-mu)/(sigma*(1-gamma)), delta, log.p  = F) ) ,
               CDF  <- 'invalid arguments: par1 is not positive or/and abs(par2) is not less than 1 in the parametrization eps' )
     }
     if(param == "isf")
@@ -27,7 +27,7 @@ ptp4 <-
       sigma  = par1
       gamma  = par2
       ifelse( sigma > 0 & gamma > 0,
-              CDF <-  ifelse( x < mu,2*gamma^2*FUN( (x-mu)/(sigma*gamma), delta, log.p)/(1+gamma^2),  ( gamma^2-1 + 2*FUN( (x-mu)/(sigma/gamma), delta, log.p)  )/(1+gamma^2)) ,
+              CDF <-  ifelse( x < mu,2*gamma^2*FUN( (x-mu)/(sigma*gamma), delta, log.p = F)/(1+gamma^2),  ( gamma^2-1 + 2*FUN( (x-mu)/(sigma/gamma), delta, log.p = F)  )/(1+gamma^2)) ,
               CDF <- 'invalid arguments: par1 or/and par2 is/are not positive in the parametrization isf' )
 
     }
